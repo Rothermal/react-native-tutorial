@@ -17,7 +17,7 @@ export default class TakeTwo extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to React Native HELLO THERE!!
         </Text>
         <Text style={styles.instructions}>
           To get started, edit index.android.js
@@ -39,13 +39,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 30,
     textAlign: 'center',
     margin: 10,
   },
   instructions: {
     textAlign: 'center',
-    color: '#333333',
+    color: '#FF5733',
     marginBottom: 5,
   },
 });
