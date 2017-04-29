@@ -5,7 +5,7 @@
  */
 
 import React, {Component} from 'react';
-import{AppRegistry, Image} from 'react-native';
+import{AppRegistry, Image, View, Text} from 'react-native';
 
 class Bananas extends Component {
     render(){
@@ -18,4 +18,24 @@ class Bananas extends Component {
     };
 }
 
-AppRegistry.registerComponent('TakeTwo', () => Bananas);
+class Greeting extends Component {
+    render() {
+        return (
+            <Text>Hello {this.props.name} !</Text>
+        );
+    }
+}
+
+class LotsOfGreetings extends Component {
+    render() {
+        return (
+        <View style={{alignItems : 'center'}}>
+            <Greeting name='Rexxar'/>
+            <Greeting name='Jaina'/>
+            <Greeting name='Valeera'/>
+         </View>
+        );
+    }
+}
+
+AppRegistry.registerComponent('TakeTwo', () => LotsOfGreetings);
