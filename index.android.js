@@ -5,49 +5,29 @@
  */
 
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { AppRegistry, StyleSheet, Text, View } from 'react-native';
 
-export default class TakeTwo extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native HELLO THERE!!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
+class LotsOfStlyes extends Component {
+    render(){
+        return (
+            <View>
+            <Text style ={styles.red}>just red </Text>
+            <Text style ={styles.bigblue}>just bigBlue</Text>
+            <Text style ={[styles.bigblue, styles.red]}>bigblue, then red</Text>
+            <Text style ={[styles.red, styles.bigblue]}>red, then bigblue</Text>
+            </View>
+        );
+     }
 }
+        const styles = StyleSheet.create({
+            bigblue: {
+                color: 'blue',
+                fontWeight: 'bold',
+                fontSize: 30,
+            },
+            red: {
+                color: 'red',
+            },
+        });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 30,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#FF5733',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('TakeTwo', () => TakeTwo);
+AppRegistry.registerComponent('TakeTwo', () => LotsOfStlyes);
