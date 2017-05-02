@@ -5,49 +5,21 @@
  */
 
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import{ AppRegistry, View, Text } from'react-native';
 
-export default class TakeTwo extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native HELLO THERE!!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
-  }
+class FixedDimensionsBasics extends Component {
+    render() {
+        return(
+            <View>
+            <View style={{ width: 155, height: 70, backgroundColor:'powderblue'}}>
+            <Text>YAo</Text>
+            <View style={{width: 125, height: 25, backgroundColor:'red'}}/>
+            </View>
+            <View style={{ width: 100, height: 100, backgroundColor:'skyblue'}}/>
+            <View style={{ width: 150, height: 150, backgroundColor:'steelblue'}}/>
+            </View>
+        );
+    }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 30,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#FF5733',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('TakeTwo', () => TakeTwo);
+AppRegistry.registerComponent('TakeTwo', () => FixedDimensionsBasics);
